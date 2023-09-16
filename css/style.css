@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    height: 2000px;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+:root {
+    --bs-dark: #212529;
+    --bs-yellow: #ffc800;
+    --ff1: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    ;
+    --ff2: Montserrat -apple-system BlinkMacSystemFont "Segoe UI"
+        Roboto "Helvetica Neue"
+        Arial sans-serif "Apple Color Emoji"
+        "Segoe UI Emoji"
+        "Segoe UI Symbol"
+        "Noto Color Emoji"
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #deb831;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eee;
+    box-shadow: 0 0 3px 3px inset #bbb;
+    border-radius: 1rem;
+}
+
+/* START componnet */
+.txt-gray {
+    color: #777;
+}
+
+p {
+
+    color: #6c757d;
+    font-family: var(--ff1);
+    font-weight: 500;
+
+}
+
+.iti {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.main-heading {
+
+    text-align: center;
+    margin: 2rem auto 4rem;
+}
+
+.main-heading h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* End componnet */
+
+section {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+}
+
+.container {
+    width: 100%;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+
+}
+
+
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+        padding-inline: 3rem;
+    }
+}
+
+
+/* medium */
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+
+
+@media (min-width : 1200px) {
+    .container {
+        width: 91%;
+    }
+}
+
+/* --------------------------------------------------start header  --------------------------------------------------*/
+
+header {
+
+    position: fixed;
+    width: 100%;
+    padding: 1.2rem 0.2rem;
+    left: 0;
+    background-color: transparent;
+    transition: 0.2s;
+    z-index: 121212121212;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo a {
+    font-size: 1.8rem;
+    color: var(--bs-yellow);
+    font-family: 'Pacifico', cursive;
+    margin-left: -0.3rem;
+    letter-spacing: 0.17rem;
+}
+
+header .container .navbar {
+    display: flex;
+    align-items: center;
+    gap: 1.9rem;
+}
+
+header .container .navbar a {
+    color: white;
+    transition: 0.2s;
+    font-size: 0.97rem;
+    letter-spacing: 0.0625em;
+}
+
+header .container .navbar li:hover a,
+header .container .navbar li a.active {
+    color: var(--bs-yellow);
+}
+
+header.b {
+
+    background-color: var(--bs-dark);
+    padding: 0.7rem 0.2rem;
+}
+
+header.b .logo img {
+
+    width: 10.6rem;
+    height: 2.4rem;
+}
+
+.menuBar {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--bs-yellow);
+    border-radius: 0.4rem;
+    color: #bbb;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ==========strat header in 991 px ========== */
+@media (max-width:992px) {
+    .menuBar {
+        display: block;
+    }
+
+    header .container .navbar {
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        padding: 2rem;
+        left: 50%;
+        background: var(--bs-dark);
+        top: 4.8rem;
+        transform: translateX(-50%) translateY(-120%);
+        transition: 0.5s;
+        z-index: -1;
+    }
+
+    header .container .navbar.active {
+        transform: translateX(-50%) translateY(0%);
+    }
+
+    header .container .navbar li {
+        width: 100%;
+        transition: 0.2s;
+        padding: 0.6rem;
+        margin-bottom: 0.2rem;
+        border-radius: 0.7rem;
+    }
+
+    header .container .navbar li:hover,
+    header .container .navbar li.active {
+        background-color: #444;
+    }
+
+    header .container .navbar li:hover a {
+        color: var(--bs-yellow);
+    }
+
+}
+
+
+
+/*========== End header in 991 px==========  */
+
+/* --------------------------------------------------End header -------------------------------------------------- */
+
+
+/* start landing */
+
+.landing {
+    background-image: url(../img/header-bg.jpg);
+    height: 100vh;
+
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    /* background-attachment: scroll; */
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .container {
+    margin-top: 5rem;
+}
+
+.landing .container h3 {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-family: var(--ff1);
+}
+
+.landing .container h1 {
+    margin-top: 0;
+    font-size: 4.5rem;
+
+}
+
+.landing .container button {
+    background-color: var(--bs-yellow);
+    padding: 1.5rem 2.3rem;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    margin-top: 2.9rem;
+    transition: 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.landing .container button:hover {
+    border: 1px solid var(--bs-yellow);
+    color: var(--bs-yellow);
+    background-color: transparent;
+}
+
+/* End landing */
+
+/* start services  */
+
+.services .container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2rem;
+    padding-inline: 4rem;
+    margin-top: 2rem;
+}
+
+.services .container .box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .container .box i {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--bs-yellow);
+    color: white;
+    font-size: 3.5rem;
+}
+
+.services .container .box h1 {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+
+}
+
+
+/* End services  */
+/* Start PORTFOLIO  */
+.portfolio {
+    background-color: #f8f9fa;
+
+}
+
+.portfolio .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 3rem 1.4rem;
+}
+
+.portfolio .container .box {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s;
+    padding: 0.4rem 0.4rem 1rem 0.4rem;
+    border: 0.4rem solid transparent;
+    border-radius: 0.3rem;
+}
+
+.portfolio .container .box:hover {
+    scale: 1.05;
+    box-shadow: 0 0 0.5rem 0.3rem #eee;
+
+    border: 0.1rem solid #eee;
+}
+
+
+.portfolio .container img {
+    position: relative;
+    width: 100%;
+    max-width: 25.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+
+/* End PORTFOLIO  */
+
+/* start about */
+
+.about .container {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+
+
+.about .container .box {
+    display: flex;
+    align-items: start;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 70%;
+
+}
+
+.about .container .box:not(:last-child):after {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #eee;
+    bottom: -2rem;
+}
+
+.about .container .box img {
+
+    border-radius: 50%;
+    width: 9rem;
+    border: 0.3rem solid #ecdcec;
+
+}
+
+
+
+
+.about .container .box .info {
+    width: 70%;
+    padding: 0 2rem;
+}
+
+.about .container .box.left .info {
+    text-align: right;
+}
+
+.about .container .box.right .info {
+    text-align: left;
+}
+
+/* End about */
+/* start team  */
+.team {
+
+    background-color: #f8f9fa;
+
+}
+
+
+.team .container .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 2rem;
+}
+
+.team .container .boxs .box {
+    text-align: center;
+}
+
+.team .container .boxs .box img {
+    width: 14rem;
+    border-radius: 50%;
+    border: 0.5rem solid rgb(0 0 0 / 10%);
+
+}
+
+.team .container .boxs .box h1 {
+    margin-top: .6rem;
+    /* margin-bottom: 1rem; */
+}
+
+.team .container .boxs .box .socail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.team .container .boxs .box .socail i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--bs-dark);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.team .container .boxs .box .socail i:hover {
+    scale: 1.05;
+    opacity: 0.8;
+}
+
+
+
+.team .container>p {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+/* End team  */
+/* start sponser */
+.sponser {
+
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.sponser .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponser .container img {
+    margin: auto;
+    text-align: center;
+    display: block;
+    height: 2.75rem;
+    transform: scaleY(1.05);
+    cursor: pointer;
+}
+
+/* End sponser */
+/* start contact us  */
+
+.contact {
+    background-image: url(../img/map-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #212529;
+
+}
+
+.contact .main-heading h1 {
+    color: white;
+}
+
+.contact .container {
+    text-align: center;
+}
+
+.contact .container .boxs {
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact .container form .box {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.contact .container form .box>div {
+
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.contact .container form .box>div input,
+.contact .container form .box textarea {
+    width: 100%;
+    resize: none;
+    padding: 1.2rem 0.8rem;
+    margin-bottom: 0.3rem;
+    border-radius: 0.3rem;
+
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    border: 1px solid transparent;
+    font-family: var(--ff1);
+}
+
+.contact .container form .box textarea {
+    min-height: 17.7rem;
+
+}
+
+
+
+
+.contact .container form .box>div input::placeholder,
+.contact .container form .box textarea::placeholder {
+    font-weight: bold;
+    opacity: 0.4;
+    font-size: 1rem;
+}
+
+.contact .container form .box>div input:focus,
+.contact .container form .box textarea:focus {
+
+    border: 1px solid var(--bs-yellow);
+}
+
+
+
+.contact .container .submit {
+    margin-top: 2rem;
+    padding: 1.4rem 2.3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.2rem;
+    background-color: var(--bs-yellow);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contact .container .submit:hover {
+    color: #fff;
+    background-color: #d9aa00;
+    border-color: #cca000;
+}
+
+.contact .container .submit.desable {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.contact .container form p {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+    text-align: left;
+    display: none;
+    position: absolute;
+
+}
+
+
+
+/* End contact us  */
+/* start footer  */
+
+footer {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+footer .container .mahmood {
+    color: var(--bs-yellow);
+    cursor: pointer;
+}
+
+footer .container .icon {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .container .icon i {
+
+    height: 2.4rem;
+    width: 2.4rem;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #212529;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+footer .container .icon i.facebook:hover {
+    background-color: #1877f2;
+}
+
+footer .container .icon i.whatsapp:hover {
+    background-color: #25d366;
+}
+
+footer .container .icon i.youtube:hover {
+    background-color: #ff0000;
+}
+
+footer .container .icon i.instagram:hover {
+    background-color: #e1306c;
+}
+
+footer .container .privacy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* End footer  */
+@media(max-width:991px) {
+    html {
+        font-size: 13px;
+
+    }
+}
+
+@media(max-width:767px) {
+    .container {
+        width: 90%;
+    }
+
+    html {
+        font-size: 10px;
+
+    }
+
+    .contact .container .boxs {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact .container .box {
+
+        width: 100%;
+    }
+
+    .contact .container .box>div {
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media(max-width:400px) {
+    footer .container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
